@@ -1,0 +1,9 @@
+<FireBoxRoom>
+    <Assets>
+        <AssetObject id="0" src="https://raw.githubusercontent.com/Friedslick6/Friedslick6.github.io/master/JanusVR/Avatars/CaveStory/Quote/0.obj" mtl="https://raw.githubusercontent.com/Friedslick6/Friedslick6.github.io/master/JanusVR/Avatars/CaveStory/Quote/0.mtl" tex_linear="false" />
+        <AssetObject id="1" src="https://raw.githubusercontent.com/Friedslick6/Friedslick6.github.io/master/JanusVR/Avatars/CaveStory/Quote/1.obj" mtl="https://raw.githubusercontent.com/Friedslick6/Friedslick6.github.io/master/JanusVR/Avatars/CaveStory/Quote/0.mtl" tex_linear="false" />
+    </Assets>
+    <Room>
+        <Ghost id="Friedslick6" js_id="Quote" cull_face="none" col="#ffffff" scale="1.3 1.3 1.3" locked="false" head_id="0" head_pos="0 1.375 0" eye_pos="0 1.4 -0.3" body_id="1" shader_id="" lighting="false" userid_pos="0 0.125 0" />
+    </Room>
+</FireBoxRoom>

@@ -1,0 +1,59 @@
+top:
+	0: fruit.0
+	0: zodiac.0
+bottom:
+	0: zodiac.1
+	0: fruit.1
+
+apple:
+	0: #f9f1d8
+	1: #fae0ce
+cherry:
+	0: #f9eed6
+	1: #fce7df
+orange:
+	0: #f9f4d4
+	1: #fceece
+peach:
+	0: #f9f0dd
+	1: #fce7df
+pear:
+	0: #f5f6d9
+	1: #e4f4cc
+
+aquarius:
+	0: #f7f3e2
+	1: #f8ece8
+aries:
+	0: #f5f4de
+	1: #f3f1dd
+cancer:
+	0: #f8f4df
+	1: #fceedb
+capricorn:
+	0: #f8f4e0
+	1: #fcecd9
+gemini:
+	0: #f4f5df
+	1: #eceee9
+leo:
+	0: #f5f5de
+	1: #f3f6d4
+libra:
+	0: #f3f5df
+	1: #eaf6df
+pisces:
+	0: #f3f4e1
+	1: #eaf2e6
+sagittarius:
+	0: #f4f5e1
+	1: #e8f3e6
+scorpio:
+	0: #f7f5dc
+	1: #faf0d2
+taurus:
+	0: #ebf4d8
+	1: #ebf4d8
+virgo:
+	0: #f5f4e2
+	1: #f2f0e9

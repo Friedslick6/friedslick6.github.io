@@ -1,0 +1,122 @@
+@font-face {
+	font-family: "AngryDadFont";
+	src: url('AngryDadFontFullNoKerning.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: "Scribbles No_ligatures";
+	src: url('ScribblesNo_ligatures.woff2') format('woff2')
+}
+
+@font-face {
+	font-family: "Scribbles Variant No_ligatures";
+	src: url('ScribblesVariantNo_ligatur-Rg.woff2') format('woff2')
+}
+
+:root {
+/*Declare default palette values*/
+	--r-outline: 0;
+	--g-outline: 0;
+	--b-outline: 0;
+	--r-body1: 17;
+	--g-body1: 17;
+	--b-body1: 17;
+	--r-body2: 34;
+	--g-body2: 34;
+	--b-body2: 34;
+	--r-body3: 51;
+	--g-body3: 51;
+	--b-body3: 51;
+	--r-body4: 68;
+	--g-body4: 68;
+	--b-body4: 68;
+	--r-belly1: 84;
+	--g-belly1: 84;
+	--b-belly1: 84;
+	--r-belly2: 102;
+	--g-belly2: 102;
+	--b-belly2: 102;
+	--r-belly3: 119;
+	--g-belly3: 119;
+	--b-belly3: 119;
+	--r-belly4: 136;
+	--g-belly4: 136;
+	--b-belly4: 136;
+	--r-faceMarkings: 153;
+	--g-faceMarkings: 153;
+	--b-faceMarkings: 153;
+	--r-tailSpikes_mouth: 170;
+	--g-tailSpikes_mouth: 170;
+	--b-tailSpikes_mouth: 170;
+	--r-flame1: 187;
+	--g-flame1: 187;
+	--b-flame1: 187;
+	--r-flame2: 204;
+	--g-flame2: 204;
+	--b-flame2: 204;
+	--r-pupils1: 221;
+	--g-pupils1: 221;
+	--b-pupils1: 221;
+	--r-pupils2: 238;
+	--g-pupils2: 238;
+	--b-pupils2: 238;
+	--r-eye: 255;
+	--g-eye: 255;
+	--b-eye: 255;
+	--outline: rgb(var(--r-outline),var(--g-outline),var(--b-outline));
+	--body1: rgb(var(--r-body1),var(--g-body1),var(--b-body1));
+	--body2: rgb(var(--r-body2),var(--g-body2),var(--b-body2));
+	--body3: rgb(var(--r-body3),var(--g-body3),var(--b-body3));
+	--body4: rgb(var(--r-body4),var(--g-body4),var(--b-body4));
+	--belly1: rgb(var(--r-belly1),var(--g-belly1),var(--b-belly1));
+	--belly2: rgb(var(--r-belly2),var(--g-belly2),var(--b-belly2));
+	--belly3: rgb(var(--r-belly3),var(--g-belly3),var(--b-belly3));
+	--belly4: rgb(var(--r-belly4),var(--g-belly4),var(--b-belly4));
+	--faceMarkings: rgb(var(--r-faceMarkings),var(--g-faceMarkings),var(--b-faceMarkings));
+	--tailSpikes_mouth: rgb(var(--r-tailSpikes_mouth),var(--g-tailSpikes_mouth),var(--b-tailSpikes_mouth));
+	--flame1: rgb(var(--r-flame1),var(--g-flame1),var(--b-flame1));
+	--flame2: rgb(var(--r-flame2),var(--g-flame2),var(--b-flame2));
+	--pupils1: rgb(var(--r-pupils1),var(--g-pupils1),var(--b-pupils1));
+	--pupils2: rgb(var(--r-pupils2),var(--g-pupils2),var(--b-pupils2));
+	--eye: rgb(var(--r-eye),var(--g-eye),var(--b-eye))
+}
+
+body {
+	margin: 0;
+	background-color: var(--body1);
+	background-image: linear-gradient(rgba(0,0,0,.52),rgba(0,0,0,.52)),
+	linear-gradient(45deg,var(--body4) 25%,transparent 25%,transparent 75%,var(--body4) 75%,var(--body4)),
+	linear-gradient(45deg,var(--body4) 25%,transparent 25%,transparent 75%,var(--body4) 75%,var(--body4));
+	background-size: 100px 100px;
+	background-position: 0 0,50px 50px
+}
+
+.sidepanel {
+	position: fixed;
+	height: 66.666vmin;
+	width: 66.666vmin;
+	background: var(--body1);
+	--mask: conic-gradient(from -135deg at right,#0000,#000 0deg 90deg,#0000 90deg) 50%/100% 100.00px;
+	-webkit-mask: var(--mask);
+}
+
+.bottompanel {
+  position: fixed;
+  height: 33.334vmin;
+  width: 100%;
+  bottom: 0;
+  background-color: var(--body1);
+}
+
+.label {
+	position: fixed;
+	margin: 0;
+	font-family: "AngryDadFont";
+/*Set label background*/
+	font-weight: unset;
+	background: var(--body1);
+/*Calculate perceived lightness via W3C Luma method*/
+	--perceived-lightness: calc(calc(calc(var(--r-body1)*0.299) + calc(var(--g-body1)*0.587) + calc(var(--b-body1)*0.114))/255);
+/*Apply black or white colour to label text according to threshold*/
+	color: hsl(0,0%,calc((var(--perceived-lightness) - 0.5)*-10000000%));
+}

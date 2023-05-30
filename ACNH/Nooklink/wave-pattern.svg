@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<pattern id="wave-pattern" width="64" height="9" patternUnits="userSpaceOnUse">
+			<path d="M16.0025 3.99958C20.0022 1.99972 24.0017 0 32 0C40.0017 0 44.0022 2.00028 48.0025 4.00042C52.0022 6.00028 56.0017 8 64 8V9H0V8C8.00167 8 12.0022 5.99972 16.0025 3.99958Z" clip-rule="evenodd" fill="#fff" fill-rule="evenodd"/>
+		</pattern>
+		<mask id="wave-mask">
+			<rect width="100%" height="100%" fill="url(#wave-pattern)"/>
+		</mask>
+	</defs>
+	<g mask='url("#wave-mask")'>
+		<rect width="100%" height="9" fill="#acd7e4"/>
+	</g>
+	<rect y="8" width="100%" height="100%" fill="#acd7e4"/>
+</svg>

@@ -1,0 +1,12 @@
+Aries: #AFAF93
+Taurus: #85AC94
+Gemini: #A3A0AA
+Cancer: #C9AB9C
+Leo: #8EA582
+Virgo: #AA9FB7
+Libra: #83A097
+Scorpio: #A39774
+Sagittarius: #8F9CA7
+Capricorn: #C79585
+Aquarius: #B491AE
+Pisces: #8594A4

@@ -1,0 +1,9 @@
+<FireBoxRoom>
+    <Assets>
+        <AssetObject id="0" src="https://raw.githubusercontent.com/Friedslick6/Friedslick6.github.io/master/JanusVR/Avatars/DragonballZ/ChibiGoku/0.obj" mtl="https://raw.githubusercontent.com/Friedslick6/Friedslick6.github.io/master/JanusVR/Avatars/DragonballZ/ChibiGoku/0.mtl" tex_linear="false" />
+        <AssetObject id="1" src="https://raw.githubusercontent.com/Friedslick6/Friedslick6.github.io/master/JanusVR/Avatars/DragonballZ/ChibiGoku/1.obj" mtl="https://raw.githubusercontent.com/Friedslick6/Friedslick6.github.io/master/JanusVR/Avatars/DragonballZ/ChibiGoku/0.mtl" tex_linear="false" />
+    </Assets>
+    <Room>
+        <Ghost id="Chibi Goku" js_id="ChibiGoku" head_id="0" head_pos="0 10.385 0" eye_pos="0 1.6 0" body_id="1" locked="false" />
+    </Room>
+</FireBoxRoom>

@@ -1,0 +1,22 @@
+<html><head><title>E1M1 - Hangar</title></head><body>
+<FireBoxRoom>
+<Assets>
+<AssetScript src="../DOOM.js" />
+<AssetSound id="DSOOF" js_id="DSOOF" src="../DSOOF.wav.gz" />
+<AssetSound id="D_E1M1" src="../D_E1M1.wav.gz" />
+<AssetImage id="SKY1_0" src="../SKY1_1.png" tex_linear="false" />
+<AssetImage id="SKY1_1" src="../SKY1_2.png" tex_linear="false" />
+<AssetImage id="SKY1_2" src="../SKY1_3.png" tex_linear="false" />
+<AssetImage id="BAR1" src="../BAR1.gif" tex_linear="false" />
+<AssetObject id="E1M1_1" src="../E1M1_1.obj.gz" mtl="../DOOM.mtl.gz" tex_linear="false" />
+<AssetObject id="E1M1_2" js_id="2" src="../E1M1_2.obj.gz" mtl="../DOOM.mtl.gz" tex_linear="false" />
+</Assets>
+<Room cursor_visible="false" default_sounds="false" pos="33 0 -112.5" fwd="0 0 -1" skybox_back_id="SKY1_0" skybox_front_id="SKY1_0" skybox_left_id="SKY1_1" skybox_right_id="SKY1_1" skybox_up_id="SKY1_2" gravity="-40.425" jump_velocity="0" walk_speed="6.25" run_speed="12.5" teleport_max_dist="0" locked="true" >
+<Sound id="D_E1M1" rect="-3.4E38 -3.4E38 3.4E38 3.4E38" loop="true" />
+<Object id="E1M1_1" collision_id="E1M1_1" pos="0 0 -226" cull_face="front" scale=".03125 .03125 .03125" lighting="false" />
+<Object id="E1M1_2" collision_id="E1M1_2" pos="0 0 -226" cull_face="none" scale=".03125 .03125 .03125" lighting="false" draw_layer="1" />
+<Object id="plane" pos="41 -.5 -124" collision_radius=".3125" visible="false" />
+<Particle image_id="BAR1" pos="41 0 -124" scale=".71875 1 1" rate="60" count="1" lighting="false" duration="3.4E38" fade_in="0" fade_out="0" loop="true" />
+</Room>
+</FireBoxRoom>
+</body></html>
