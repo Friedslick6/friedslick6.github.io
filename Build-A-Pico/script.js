@@ -11,4 +11,4 @@ setInterval(function () {
 				)
 				.join(""); //and then that array is rejoined
 		});
-},240);
+},250);

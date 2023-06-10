@@ -196,7 +196,7 @@ body {
 				-webkit-linear-gradient(225deg, #fff0 75%, var(--outline) 75%) 0 17vmin,
 				-webkit-linear-gradient(135deg, #fff0 75%, var(--outline) 75%) 0 17vmin;
 	background-size: 15vmin 15vmin;
-	animation: sidepanel-after 1536ms linear 0s infinite;
+	animation: sidepanel-after 1.2s linear 0s infinite;
 }
 
 .bottompanel {
