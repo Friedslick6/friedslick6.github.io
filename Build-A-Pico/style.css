@@ -166,7 +166,7 @@ body {
 	position: fixed;
 	inset: 0 0 auto auto;
 	z-index: 999;
-	font-size: 14vmin;
+	font-size: 13vmin;
 	white-space: nowrap;
 }
 
