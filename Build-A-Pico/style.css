@@ -166,7 +166,7 @@ body {
 	position: fixed;
 	inset: 0 0 auto auto;
 	z-index: 999;
-	font-size: 14vh;
+	font-size: 14vmin;
 	white-space: nowrap;
 }
 
@@ -177,12 +177,12 @@ body {
 	background: var(--body1);
 	border-left: 100vw solid var(--body1);
 	text-align: center;
-	padding-top: 14vh;
+	padding-top: 13vmin;
 	animation: sidepanel 1s ease-in .5s 1 normal forwards;
 }
 
 .sidepanel label {
-	font-size: 8vh;
+	font-size: 8vmin;
 }
 
 .sidepanel::after {
