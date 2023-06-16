@@ -1,4 +1,4 @@
-const titles = Array.from(document.querySelectorAll(".title"));
+const titles = document.querySelectorAll(".title");
 let frameCount = 0;
 
 function animateTitles() {
