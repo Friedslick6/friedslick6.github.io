@@ -100,9 +100,6 @@
   50% {
     font-family: 'Scribbles Variant No_ligatures';
   }
-  to {
-    font-family: 'Scribbles No_ligatures';
-  }
 }
 
 /*sidepanel slide animation*/
@@ -148,7 +145,7 @@ body {
 										(var(--b-body1) * 0.114)
 								) / 255
 						) - 0.5
-				) * -10000000%
+				) * -2147483648%
 		)
 	);
 }
@@ -159,7 +156,7 @@ body {
 
 .subtitle {
 	font-family: "Scribbles No_ligatures";
-	animation: subtitle .5s linear 0s infinite;
+	animation: subtitle .5s linear .5s infinite alternate;
 }
 
 .header {
