@@ -6,11 +6,9 @@ function animateTitles() {
 
 	if (frameCount % 15 === 0) {
 		titles.forEach(title => {
-			let newContent = Array.from(title.textContent.toLowerCase(), char => {
-				return Math.random() < 0.5 ? char : char.toUpperCase();
-			}).join("");
-
-			title.textContent = newContent;
+			title.textContent = title.textContent.replace(/[a-z]/gi, (match) => {
+				return Math.random() < 0.5 ? match.toLowerCase() : match.toUpperCase();
+			});
 		});
 	}
 
