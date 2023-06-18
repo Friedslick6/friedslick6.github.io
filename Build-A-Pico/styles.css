@@ -109,11 +109,15 @@ body {
 	position: relative;
 	margin: 0;
 	overflow: hidden;
-	/* Dim by 52% */
-	background: linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.52)),
+	font-smooth: never;
+	-webkit-font-smoothing: none;
+	image-rendering: crisp-edges;
+	background:
+		/* Dim by 52% */
+		linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.52)),
 		/* Repeating alternating colored squares */
 		repeating-conic-gradient(var(--body1) 0% 25%, var(--body4) 0% 50%),
-		;
+		var(--body1);
 	background-size: 15vmin 15vmin;
 	line-height: 1;
 }
