@@ -173,7 +173,7 @@ body {
 	font-weight: unset;
 	background: var(--body1);
 	/*apply black/white colour to label text according to 50% threshold against perceived lightness of the label's background (via W3C Luma method)*/
-	color: hsl(0, 0%, calc((((var(--r-body1) * 0.299) + (var(--g-body1) * 0.587) + (var(--b-body1) * 0.114) / 255) - 0.5) * -3.4e+38%));
+	color: hsl(0, 0%, calc(((((var(--r-body1) * 0.299) + (var(--g-body1) * 0.587) + (var(--b-body1) * 0.114)) / 255) - 0.5) * -3.4e+38%));
 }
 
 .title {
