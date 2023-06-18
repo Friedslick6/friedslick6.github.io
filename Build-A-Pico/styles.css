@@ -128,44 +128,7 @@ body {
 	line-height: 1;
 }
 
-.title,
-.subtitle {
-	-webkit-user-select: none;
-	font-weight: unset;
-	background: var(--body1);
-	/*apply black/white colour to label text according to 50% threshold against perceived lightness of the label's background (via W3C Luma method)*/
-	color: hsl(
-		0,
-		0%,
-		calc(
-			(
-					(
-							(
-									(var(--r-body1) * 0.299) + (var(--g-body1) * 0.587) +
-										(var(--b-body1) * 0.114)
-								) / 255
-						) - 0.5
-				) * -3.4e+38%
-		)
-	);
-}
 
-.title {
-	font-family: "AngryDadFont";
-}
-
-.subtitle {
-	font-family: "Scribbles No_ligatures";
-	animation: subtitle .5s linear .5s infinite alternate;
-}
-
-.header {
-	position: fixed;
-	inset: 0 0 auto auto;
-	z-index: 999;
-	font-size: 13vmin;
-	white-space: nowrap;
-}
 
 .sidepanel {
 	position: fixed;
@@ -202,4 +165,29 @@ body {
 	width: 100%;
 	bottom: 0;
 	background-color: var(--body1);
+}
+
+.title,
+.subtitle {
+	-webkit-user-select: none;
+	font-weight: unset;
+	background: var(--body1);
+	/*apply black/white colour to label text according to 50% threshold against perceived lightness of the label's background (via W3C Luma method)*/
+	color: hsl(0, 0%, calc((((var(--r-body1) * 0.299) + (var(--g-body1) * 0.587) + (var(--b-body1) * 0.114) / 255) - 0.5) * -3.4e+38%));
+}
+
+.title {
+	font-family: "AngryDadFont";
+}
+
+.subtitle {
+	font-family: "Scribbles No_ligatures";
+	animation: subtitle .5s linear .5s infinite alternate;
+}
+
+.header {
+	position: fixed;
+	inset: 0 0 auto auto;
+	font-size: 13vmin;
+	white-space: nowrap;
 }
