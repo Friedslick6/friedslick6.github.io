@@ -64,6 +64,9 @@
 	--pupils1: rgb(var(--r-pupils1), var(--g-pupils1), var(--b-pupils1));
 	--pupils2: rgb(var(--r-pupils2), var(--g-pupils2), var(--b-pupils2));
 	--eye: rgb(var(--r-eye), var(--g-eye), var(--b-eye));
+	/* Units */
+	--background-size: 15vmin;
+	--header-size: 13vmin;
 }
 
 /* Custom fonts */
@@ -92,71 +95,141 @@
 }
 
 /* Sidepanel slide animation */
-@keyframes sidepanel {
+@keyframes left-side-panel {
 	to {
 		border-left: 0 solid var(--body1);
 	}
 }
 
 /* Sidepanel zig-zag move animation */
-@keyframes sidepanel-after {
+@keyframes left-side-panel-edge {
 	to {
-		background-position-y: 15vmin, 15vmin, 32vmin, 32vmin;
+		background-position-y: var(--background-size), var(--background-size), 32vmin, 32vmin;
 	}
 }
 
-body {
-	position: relative;
+body, div, label, button, img {
 	margin: 0;
-	overflow: hidden;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 100%;
 	font-smooth: never;
 	-webkit-font-smoothing: none;
 	image-rendering: crisp-edges;
+}
+
+body {
+	overflow: hidden;
 	background:
 		/* Dim by 52% */
 		linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.52)),
 		/* Repeating alternating colored squares */
 		repeating-conic-gradient(var(--body1) 0% 25%, var(--body4) 0% 50%),
 		var(--body1);
-	background-size: 15vmin 15vmin;
+	background-size: var(--background-size) var(--background-size);
 	line-height: 1;
 }
 
 
-.sidepanel {
+.left-side-panel {
 	position: fixed;
-	width: calc(100vw / 3);
+	inset: 0 auto auto 0;
+	width: calc(100vw / 3 + var(--background-size) / 2);
 	height: calc(100vh / 1.5);
-	background: var(--body1);
 	border-left: 100vw solid var(--body1);
-	text-align: center;
-	padding-top: 13vmin;
-	animation: sidepanel 1s ease-in .5s 1 normal forwards;
+	display: grid;
+	grid-template-columns: 1fr calc(var(--background-size) / 2);
+	grid-template-rows: var(--header-size) 1fr;
+	animation: left-side-panel 1s ease-in .5s 1 normal forwards;
 }
 
-.sidepanel label {
+.left-side-panel > div:first-child, .options {
+	background: var(--body1);
+}
+
+.options {
+	display: grid;
+	place-items: center center;
+	align-content: space-evenly;
 	font-size: 8vmin;
 }
 
-.sidepanel::after {
-	content: "";
-	position: absolute;
-	width: 15vmin;
-	height: calc(100vh / 1.5);
-	inset: 0 -15vmin 0 auto;
+.left-side-panel-edge {
+	grid-area: 1 / 2 / 3 / 3;
 	background: -webkit-linear-gradient(225deg, #fff0 75%, var(--body1) 75%),
 		-webkit-linear-gradient(135deg, #fff0 75%, var(--body1) 75%),
 		-webkit-linear-gradient(225deg, #fff0 75%, var(--outline) 75%) 0 17vmin,
 		-webkit-linear-gradient(135deg, #fff0 75%, var(--outline) 75%) 0 17vmin;
-	background-size: 15vmin 15vmin;
-	animation: sidepanel-after 1.2s linear 0s infinite;
+	background-size: var(--background-size) var(--background-size);
+ 	animation: left-side-panel-edge 1.2s linear 0s infinite;
 }
 
-.bottompanel {
+.right-side-panel {
 	position: fixed;
-	height: calc(100vh / 3);
+	inset: 0 0 auto auto;
+	width: calc(100vw / 1.5 - var(--background-size) / 2);
+	height: calc(100vh / 1.5);
+	display: grid;
+	grid-template-rows: var(--header-size) 1fr;
+}
+
+.previews {
+	height: calc(100vh / 1.5 - var(--header-size));
+	display: grid;
+	place-items: center center;
+	align-content: space-evenly;
+	overflow: hidden;
+}
+
+button, label {
+	cursor: pointer;
+}
+
+.arrow-back, .preview, arrow-forward {
+	
+}
+
+.arrow-back {
+	background-color: #800;
+}
+.preview {
+	background-color: #080;
+}
+.arrow-forward {
+	background-color: #008;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+.arrow-back > img {
+	transform: scaleX(-1);
+}
+
+/* Landscape orientation */
+@media (orientation: landscape) {
+	.previews {
+		grid-template-columns: 1fr 1.5fr 1fr;
+	}
+}
+/* Portrait orientation */
+@media (orientation: portrait) {
+	.previews {
+		grid-template-rows: 1fr 1.5fr 1fr;
+	}
+	.arrow-back > img, .arrow-forward > img {
+		rotate: 90deg;
+	}
+}
+
+.bottom-panel {
+	position: fixed;
+	inset: auto auto 0 0;
 	width: 100%;
-	bottom: 0;
+	height: calc(100vh / 3);
 	background-color: var(--body1);
 }
 
@@ -181,6 +254,6 @@ body {
 .header {
 	position: fixed;
 	inset: 0 0 auto auto;
-	font-size: 13vmin;
+	font-size: var(--header-size);
 	white-space: nowrap;
 }
