@@ -1,11 +1,15 @@
 :root {
 	/* Default palette values */
+	  
 	--r-outline: 0;
 	--g-outline: 0;
 	--b-outline: 0;
-	--r-body1: 17;
+/* 	--r-body1: 17;
 	--g-body1: 17;
-	--b-body1: 17;
+	--b-body1: 17; */
+	--r-body1: 143;
+	--g-body1: 215;
+	--b-body1: 125;
 	--r-body2: 34;
 	--g-body2: 34;
 	--b-body2: 34;
@@ -48,7 +52,7 @@
 	--r-eye: 255;
 	--g-eye: 255;
 	--b-eye: 255;
-	--outline: rgb(var(--r-outline), var(--g-outline), var(--b-outline));
+/* 	--outline: rgb(var(--r-outline), var(--g-outline), var(--b-outline));
 	--body1: rgb(var(--r-body1), var(--g-body1), var(--b-body1));
 	--body2: rgb(var(--r-body2), var(--g-body2), var(--b-body2));
 	--body3: rgb(var(--r-body3), var(--g-body3), var(--b-body3));
@@ -63,8 +67,24 @@
 	--flame2: rgb(var(--r-flame2), var(--g-flame2), var(--b-flame2));
 	--pupils1: rgb(var(--r-pupils1), var(--g-pupils1), var(--b-pupils1));
 	--pupils2: rgb(var(--r-pupils2), var(--g-pupils2), var(--b-pupils2));
-	--eye: rgb(var(--r-eye), var(--g-eye), var(--b-eye));
-	/* Units */
+	--eye: rgb(var(--r-eye), var(--g-eye), var(--b-eye)); */
+	--outline: #000;
+	--body1: #8fd77d;
+	--body2: #c3e584;
+	--body3: #f0ee88;
+	--body4: #ffe789;
+	--belly1: #ffdcac;
+	--belly2: #ffe4c1;
+	--belly3: #ffedd6;
+	--belly4: #fff0e7;
+	--faceMarkings: #edffe9;
+	--tailSpikes_mouth: #ff673c;
+	--flame1: #1bff50;
+	--flame2: #a6f072;
+	--pupils1: #002c56;
+	--pupils2: #9bc0e5;
+	--eye: #fff;
+/* 	Size variables */
 	--background-size: 15vmin;
 	--header-size: 13vmin;
 }
@@ -172,39 +192,27 @@ body {
 	height: calc(100vh / 1.5);
 	display: grid;
 	grid-template-rows: var(--header-size) 1fr;
+	place-items: stretch;
 }
 
 .previews {
-	height: calc(100vh / 1.5 - var(--header-size));
 	display: grid;
-	place-items: center center;
-	align-content: space-evenly;
-	overflow: hidden;
 }
 
-button, label {
+.arrow-back, .arrow-forward {
 	cursor: pointer;
-}
-
-.arrow-back, .preview, arrow-forward {
-	
-}
-
-.arrow-back {
-	background-color: #800;
-}
-.preview {
-	background-color: #080;
-}
-.arrow-forward {
-	background-color: #008;
+	background-color: transparent;
 }
 
 img {
-	max-width: 100%;
-	height: auto;
 	display: block;
+	width: 0;
+	height: 0;
+	min-width: 100%;
+	min-height: 100%;
+	object-fit: contain;
 }
+
 .arrow-back > img {
 	transform: scaleX(-1);
 }
@@ -212,13 +220,13 @@ img {
 /* Landscape orientation */
 @media (orientation: landscape) {
 	.previews {
-		grid-template-columns: 1fr 1.5fr 1fr;
+		grid-template-columns: 2fr 3fr 2fr;
 	}
 }
 /* Portrait orientation */
 @media (orientation: portrait) {
 	.previews {
-		grid-template-rows: 1fr 1.5fr 1fr;
+		grid-template-rows: 2fr 3fr 2fr;
 	}
 	.arrow-back > img, .arrow-forward > img {
 		rotate: 90deg;
