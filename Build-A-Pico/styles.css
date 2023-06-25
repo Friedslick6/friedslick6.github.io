@@ -86,7 +86,7 @@
 	--eye: #fff;
 /* 	Size variables */
 	--background-size: 15vmin;
-	--header-size: 13vmin;
+	--header-size: 10.5vmin;
 }
 
 /* Custom fonts */
@@ -137,6 +137,7 @@ body, div, label, button, img {
 	font-smooth: never;
 	-webkit-font-smoothing: none;
 	image-rendering: crisp-edges;
+	background-color: transparent;
 }
 
 body {
@@ -148,7 +149,6 @@ body {
 		repeating-conic-gradient(var(--body1) 0% 25%, var(--body4) 0% 50%),
 		var(--body1);
 	background-size: var(--background-size) var(--background-size);
-	line-height: 1;
 }
 
 
@@ -192,16 +192,20 @@ body {
 	height: calc(100vh / 1.5);
 	display: grid;
 	grid-template-rows: var(--header-size) 1fr;
-	place-items: stretch;
+}
+
+.name-input {
+	padding: 0 1ch;
+	width: 100%;
+	font-size: 8vmin;
 }
 
 .previews {
 	display: grid;
 }
 
-.arrow-back, .arrow-forward {
+.arrow-back, .arrow-forward, label {
 	cursor: pointer;
-	background-color: transparent;
 }
 
 img {
@@ -244,8 +248,9 @@ img {
 .title,
 .subtitle {
 	-webkit-user-select: none;
+	line-height: 1;
 	font-weight: unset;
-	background: var(--body1);
+	background-color: var(--body1);
 	/* Apply black/white colour to label text according to 50% threshold against perceived lightness of the label's background (via W3C Luma method) */
 	color: hsl(0, 0%, calc(((((var(--r-body1) * 0.299) + (var(--g-body1) * 0.587) + (var(--b-body1) * 0.114)) / 255) - 0.5) * -3.4e+38%));
 }
@@ -261,7 +266,8 @@ img {
 
 .header {
 	position: fixed;
-	inset: 0 0 auto auto;
+	inset: 0 auto auto 0;
 	font-size: var(--header-size);
 	white-space: nowrap;
+	background-color: transparent;
 }
