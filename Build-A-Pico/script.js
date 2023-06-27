@@ -1,11 +1,9 @@
 const titles = document.querySelectorAll(".title"),
-	nameInput = document.querySelector('.name-input'),
-	nameMaxLength = parseInt(nameInput.getAttribute('maxlength'));
+	nameInput = document.querySelector('#name-input');
 let frameCount = 0;
 
-nameInput.addEventListener("input", function(event) {
-	let nameInput = event.target.value;
-	nameInput.length > nameMaxLength && (event.target.value = nameInput.slice(0, nameMaxLength))
+nameInput.addEventListener("keypress", function(event) {
+	this.innerHTML.length >= this.getAttribute("maxlength") && event.preventDefault()
 });
 
 function animateTitles() {
