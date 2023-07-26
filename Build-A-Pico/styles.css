@@ -274,5 +274,5 @@ body {
 }
 
 #name-input:empty::before {
-/*     content: "NaMe?" */
+/*     content: var(--name); */
 }
