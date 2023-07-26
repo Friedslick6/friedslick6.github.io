@@ -1,7 +1,7 @@
 :root {
     /* Default palette values */
     --name: "Melon";
-    --outline: #000;
+    --outline: #000000;
     --body1: #8fd77d;
     --body2: #c3e584;
     --body3: #f0ee88;
@@ -16,7 +16,7 @@
     --flame2: #a6f072;
     --pupils1: #002c56;
     --pupils2: #9bc0e5;
-    --eye: #fff;
+    --eye: #ffffff;
     --r-body1: 143;
     --g-body1: 215;
     --b-body1: 125;
