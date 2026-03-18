@@ -230,7 +230,7 @@
           var(--Trans_Flag_Hard)
         );
         /* Sizes */
-        --Font_Height: 1.75rem;
+        --Font_Height: 1.75rem; /* Requires Settings Modal */
         --Font_Ratio: 1.2649;
         --XSmall_Font_Height: calc(pow(var(--Font_Ratio), -2) * var(--Font_Height)); /* 17.5003061459806px; 13.1252196880583pt; */
         --Small_Font_Height: calc(pow(var(--Font_Ratio), -1) * var(--Font_Height)); /* 22.1361372440509px; 16.6020903834249pt; */
@@ -345,12 +345,12 @@
       @media (prefers-color-scheme: no-preference) or (prefers-color-scheme: light) { /* Light Colour Scheme */
         @supports (scrollbar-color: auto) {
           html {
-            scrollbar-color: var(--Coal) var(--Off-White);
+            scrollbar-color: color-mix(in oklch, var(--Coal) 70%, var(--Off-White)) var(--Off-White);
           }
         }
         @supports selector(::-webkit-scrollbar) {
           html::-webkit-scrollbar-thumb {
-            background: var(--Coal);
+            color-mix(in oklch, var(--Coal) 70%, var(--Off-White));
           }
           html::-webkit-scrollbar-track {
             background: var(--Off-White);
@@ -377,15 +377,15 @@
       @media (prefers-color-scheme: dark) { /* Dark Colour Scheme */
         @supports (scrollbar-color: auto) {
           html {
-            scrollbar-color: var(--Off-White) var(--Coal);
+            color-mix(in oklch, var(--Off-White) 70%, var(--Coal)) var(--Coal);
           }
         }
         @supports selector(::-webkit-scrollbar) {
           html::-webkit-scrollbar-thumb {
-            background: var(--Off-White);
+            color-mix(in oklch, var(--Off-White) 70%, var(--Coal));
           }
           html::-webkit-scrollbar-track {
-            background: var(--Coal);
+            background: var(--Off-White);
           }
         }
         body {
@@ -450,6 +450,13 @@
       body {
         height: calc(100vh - (var(--Body_Border_Width) * 2));
         margin: var(--Body_Border_Width);
+        @supports(margin: max(0px)) {
+          margin: 
+            max(env(safe-area-inset-top), var(--Body_Border_Width))
+            max(env(safe-area-inset-right), var(--Body_Border_Width))
+            max(env(safe-area-inset-bottom), var(--Body_Border_Width))
+            max(env(safe-area-inset-left), var(--Body_Border_Width));
+        }
         border-radius: var(--Body_Border_Radius);
       }
       main {
