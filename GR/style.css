@@ -200,7 +200,8 @@
     --H2_Font_Height: calc(pow(var(--Font_Ratio), 5) * var(--Font_Height)); /* 90.6648597799776px; 67.9985934344649pt; */
     --H1_Font_Height: calc(pow(var(--Font_Ratio), 6) * var(--Font_Height)); /* 114.6819811356940px; 86.0114208352546pt; */
     --Body_Border_Width: 5vmin;
-    --Body_Border_Radius: 8px;
+    --Body_Border_Radius: .5rem;
+    --Content_Margin: .25rem;
     --Header_Height: 7.5%;
     --Footer_Height: 7.5%;
     --Running_Marginal_Border_Width: 5px;
@@ -302,6 +303,7 @@
       background: var(--Off-White);
     }
     header,
+    .Sidebar,
     footer {
       background: var(--Quartz);
     }
@@ -328,6 +330,7 @@
       background: var(--Coal);
     }
     header,
+    .Sidebar,
     footer {
       background: var(--Clay);
     }
@@ -379,10 +382,11 @@
   main,
   footer {
     border-radius: var(--Body_Border_Radius);
+    margin: var(--Content_Margin);
   }
   header {
-    display: grid;
     grid-area: Header;
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 3fr 1fr;
     grid-template-areas:
@@ -390,8 +394,8 @@
     "Navigation";
   }
   .Sidebar {
-    display: grid;
     grid-area: Sidebar;
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
@@ -408,8 +412,8 @@
     overflow-y: scroll;
   }
   footer {
-    display: grid;
     grid-area: Footer;
+    display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 3fr 1fr;
     grid-template-areas:
@@ -427,6 +431,9 @@
   }
   .Carousel {
     grid-area: Carousel;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
   }
   .Navigation {
     grid-area: Navigation;
@@ -447,5 +454,11 @@
     grid-area: ABN;
     align-self: end;
     justify-self: end;
+  }
+  .Carousel > img {
+    flex: 0 0 auto;
+    width: 25%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
   }
 }
