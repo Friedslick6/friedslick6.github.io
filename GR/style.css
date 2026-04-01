@@ -365,16 +365,87 @@
         max(env(safe-area-inset-right), var(--Body_Border_Width))
         max(env(safe-area-inset-bottom), var(--Body_Border_Width))
         max(env(safe-area-inset-left), var(--Body_Border_Width));
-    }
+    border-radius: var(--Body_Border_Radius);
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 3fr 6fr 1fr;
+    grid-template-areas:
+    "Header Header"
+    "Sidebar Main"
+    "Sidebar Footer";
+  }
+  header,
+  .Sidebar,
+  main,
+  footer {
     border-radius: var(--Body_Border_Radius);
   }
+  header {
+    display: grid;
+    grid-area: Header;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr;
+    grid-template-areas:
+    "Carousel"
+    "Navigation";
+  }
+  .Sidebar {
+    display: grid;
+    grid-area: Sidebar;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "Quick-Links"
+    "Calendar";
+  }
   main {
-    position: fixed;
+    grid-area: Main;
     inset: var(--Body_Border_Width);
     border-radius: var(--Body_Border_Radius);
     padding: calc(var(--Body_Border_Width) / 2);
     text-align: center;
     text-wrap: balance;
     overflow-y: scroll;
+  }
+  footer {
+    display: grid;
+    grid-area: Footer;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    grid-template-areas:
+    "Acknowledgement_of_Country Flags"
+    "Acknowledgement_of_Country ABN";
+  }
+  .Carousel,
+  .Navigation,
+  .Quick-Links,
+  .Calendar,
+  .Acknowledgement_of_Country,
+  .Flags {
+    align-self: center;
+    text-align: center;
+  }
+  .Carousel {
+    grid-area: Carousel;
+  }
+  .Navigation {
+    grid-area: Navigation;
+  }
+  .Quick-Links {
+    grid-area: Quick-Links;
+  }
+  .Calendar {
+    grid-area: Calendar;
+  }
+  .Acknowledgement_of_Country {
+    grid-area: Acknowledgement_of_Country;
+  }
+  .Flags {
+    grid-area: Flags;
+  }
+  .ABN {
+    grid-area: ABN;
+    align-self: end;
+    justify-self: end;
   }
 }
