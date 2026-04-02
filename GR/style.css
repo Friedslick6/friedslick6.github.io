@@ -201,7 +201,7 @@
     --H1_Font_Height: calc(pow(var(--Font_Ratio), 6) * var(--Font_Height));      /* 67.8822509939085px; 4.24264068711928rem; */
     --Body_Border_Width: 5vmin;
     --Body_Border_Radius: 1vmin;
-    --Content_Margin: .5rem;
+    --Content_Margin: .25rem;
     --Header_Height: 7.5%;
     --Footer_Height: 7.5%;
     --Running_Marginal_Border_Width: 5px;
