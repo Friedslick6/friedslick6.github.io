@@ -188,17 +188,17 @@
       var(--Trans_Flag_Hard)
     );
     /* Sizes */
-    --Font_Height: 1.75rem; /* Requires Settings Modal */
-    --Font_Ratio: 1.2649;
-    --XSmall_Font_Height: calc(pow(var(--Font_Ratio), -2) * var(--Font_Height)); /* 17.5003061459806px; 13.1252196880583pt; */
-    --Small_Font_Height: calc(pow(var(--Font_Ratio), -1) * var(--Font_Height)); /* 22.1361372440509px; 16.6020903834249pt; */
-    --Medium_Font_Height: var(--Font_Height); /* 28px; 20.9999841259942pt; */
-    --H6_Font_Height: calc(pow(var(--Font_Ratio), 1) * var(--Font_Height)); /* 35.4172000000000px; 26.5628799209700pt; */
-    --H5_Font_Height: calc(pow(var(--Font_Ratio), 2) * var(--Font_Height)); /* 44.7992162800000px; 33.5993868120350pt; */
-    --H4_Font_Height: calc(pow(var(--Font_Ratio), 3) * var(--Font_Height)); /* 56.6665286725720px; 42.4998643785430pt; */
-    --H3_Font_Height: calc(pow(var(--Font_Ratio), 4) * var(--Font_Height)); /* 71.6774921179363px; 53.7580784524191pt; */
-    --H2_Font_Height: calc(pow(var(--Font_Ratio), 5) * var(--Font_Height)); /* 90.6648597799776px; 67.9985934344649pt; */
-    --H1_Font_Height: calc(pow(var(--Font_Ratio), 6) * var(--Font_Height)); /* 114.6819811356940px; 86.0114208352546pt; */
+    --Font_Height: 1.5rem; /* Requires Settings Modal */
+    --Font_Ratio: pow(2,1/4); /* 1.18920711500272... */
+    --XSmall_Font_Height: calc(pow(var(--Font_Ratio), -2) * var(--Font_Height)); /* 16.9705627484771px; 1.06066017177982rem; */
+    --Small_Font_Height: calc(pow(var(--Font_Ratio), -1) * var(--Font_Height));  /* 20.1815139660891px; 1.26134462288057rem; */
+    --Medium_Font_Height: var(--Font_Height);                                    /* 24px; 1.5rem; */
+    --H6_Font_Height: calc(pow(var(--Font_Ratio), 1) * var(--Font_Height));      /* 28.5409707600653px; 1.78381067250408rem; */
+    --H5_Font_Height: calc(pow(var(--Font_Ratio), 2) * var(--Font_Height));      /* 33.9411254969543px; 2.12132034355964rem; */
+    --H4_Font_Height: calc(pow(var(--Font_Ratio), 3) * var(--Font_Height));      /* 40.3630279321783px; 2.52268924576114rem; */
+    --H3_Font_Height: calc(pow(var(--Font_Ratio), 4) * var(--Font_Height));      /* 48px; 3rem; */
+    --H2_Font_Height: calc(pow(var(--Font_Ratio), 5) * var(--Font_Height));      /* 57.0819415201306px; 3.56762134500816rem; */
+    --H1_Font_Height: calc(pow(var(--Font_Ratio), 6) * var(--Font_Height));      /* 67.8822509939085px; 4.24264068711928rem; */
     --Body_Border_Width: 5vmin;
     --Body_Border_Radius: .5rem;
     --Content_Margin: .25rem;
